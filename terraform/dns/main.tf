@@ -1,5 +1,5 @@
 provider "cloudflare" {
-  retries = 3
+  retries            = 3
   api_client_logging = true
   # CLOUDFLARE_API_KEY from environment
   # CLOUDFLARE_EMAIL from environment
