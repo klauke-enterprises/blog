@@ -3,6 +3,10 @@ on:
   - push
   - pull_request
 
+defaults:
+  run:
+    working-directory: terraform/dns
+
 jobs:
   terraform:
     name: 'Terraform'
@@ -16,13 +20,10 @@ jobs:
           terraform_version: 0.12.0
       - name: 'Terraform Init'
         run: terraform init
-        working-directory: terraform/dns
       - name: 'Terraform Format'
         run: terraform fmt -check
-        working-directory: terraform/dns
       - name: 'Terraform Plan'
         run: terraform plan
-        working-directory: terraform/dns
         env:
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
