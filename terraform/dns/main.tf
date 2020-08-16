@@ -20,3 +20,11 @@ resource "cloudflare_record" "www" {
   type    = "A"
   proxied = false
 }
+
+resource "cloudflare_record" "test2" {
+  zone_id = var.zone_id
+  name    = "test2"
+  value   = "1.1.1.1"
+  type    = "A"
+  proxied = false
+}
