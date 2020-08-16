@@ -10,6 +10,9 @@ This enables some interesting options:
 - The infrastructure is much closer to the developers (DevOps)
 - You have a complete history of your infrastructure, its changes and its current state
 
+### GitOps: CI/CD Pipeline with Terraform and GitHub Actions
+Terraform can also be applied using a simple CI/CD Pipeline, e.g. built with GitHub Actions. I've setup a (terraform workflow)[.github/workflows/terraform.yaml] that does a full terraform lifecycle with a terraform remote backend. 
+
 ### Terraform Proxmox
 It's rather simple to deploy virtual machines with terraform in proxmox. You can find the corresponding terraform file [here](terraform/proxmox). You can find a detailed description of this approach in this blog article (german):
 
