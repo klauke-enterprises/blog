@@ -5,6 +5,17 @@ provider "cloudflare" {
   # CLOUDFLARE_EMAIL from environment
 }
 
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "klauke-enterprises"
+
+    workspaces {
+      name = "blog"
+    }
+  }
+}
+
 variable "zone_id" {
   default = "3c1de2a3c9c1e2410436b346819015b9"
 }
