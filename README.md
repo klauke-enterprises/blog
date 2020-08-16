@@ -1,5 +1,5 @@
-# blog
-Resources regarding Blog Articles
+# Blog
+Resources regarding Blog Articles of the Klauke Enterprises [Blog](https://blog.klauke-enterprises.com)
 
 ## GitOps with Terraform
 While infrastructure is often maintained manually and decentralized the GitOps approach aims to consolidate a declarative configuration of your infrastructure
