@@ -21,12 +21,15 @@ jobs:
         uses: hashicorp/setup-terraform@v1.1.0
         with:
           terraform_version: 0.12.0
-      - name: 'Terraform Init'
-        id: init
-        run: terraform init
       - name: 'Terraform Format'
         id: fmt
         run: terraform fmt -check
+      - name: 'Terraform Init'
+        id: init
+        run: terraform init
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
       - name: 'Terraform Plan'
         id: plan
         run: terraform plan
